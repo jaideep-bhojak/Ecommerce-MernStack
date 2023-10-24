@@ -167,7 +167,6 @@ const uploadImages = asyncHandler(async(req, res) => {
         const uploader = (pathoffile) => cloudinaryUploadImg(pathoffile, "images");
         const urls = [];
         const files = req.files;
-        console.log(files);
         for (const file of files){
             const {path} = file;
             console.log(path);
@@ -189,4 +188,4 @@ const uploadImages = asyncHandler(async(req, res) => {
 });
 
 
-module.exports = { createBlog, updateBlog, getBlog, getAllBlogs, deleteBlog, likeBlog, disliketheBlog, uploadImages}
+module.exports = { createBlog, updateBlog, getBlog, getAllBlogs, deleteBlog, likeBlog, disliketheBlog, uploadImages} 
